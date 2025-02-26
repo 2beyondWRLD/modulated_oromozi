@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Phaser Game</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+<script src="scripts/VillageCommons.js"></script>
+<script src="scripts/constants.js"></script>
+<script src="scripts/MainScene.js"></script>
+<script src="scripts/FishingScene.js"></script>
+</head>
+<body>
+  <div id="phaser-game"></div>
+  <script>
+    const config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      parent: 'phaser-game',
+      physics: { default: 'arcade', arcade: { gravity: { y: 0 } } },
+      scene: [VillageCommons]  // Line 25: needs VillageCommons defined
+    };
+    const game = new Phaser.Game(config);
+  </script>
+</body>
+</html>
